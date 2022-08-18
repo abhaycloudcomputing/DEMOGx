@@ -81,7 +81,24 @@ class SFdatabase:
         print('File Read below data found')
         self.pr_df.columns = self.pr_df.columns.str.upper()  
         print(self.pr_df) 
-        self.pr_df['FULLNAME'] = self.pr_df['FIRSTNAME'] + ' ' + self.pr_df['LASTNAME']    
+        self.pr_df['FULLNAME'] = self.pr_df['FIRSTNAME'] + ' ' + self.pr_df['LASTNAME']  
+
+    def readFileCSV(self):
+        # Standard mapper       
+        print('Reading SM excel file::')
+        self.sm_df=pd.read_excel("SampleData_SM.xlsx")
+        print('File Read below data found')
+        self.sm_df.columns = self.sm_df.columns.str.upper()      
+        self.sm_df['FULLNAME'] = self.sm_df['FIRSTNAME'] + ' ' + self.sm_df['LASTNAME']
+        print(self.sm_df) 
+
+        # Provider registry
+        print('Reading PR excel  file::')        
+        self.pr_df=pd.read_excel("SampleData_PR.xlsx")
+        print('File Read below data found')
+        self.pr_df.columns = self.pr_df.columns.str.upper()          
+        self.pr_df['FULLNAME'] = self.pr_df['FIRSTNAME'] + ' ' + self.pr_df['LASTNAME']     
+        print(self.pr_df)    
 
 
     def fuzzy_merge(self, df_1, df_2, key1, key2, threshold=90, limit=1):
@@ -175,7 +192,8 @@ if __name__=='__main__':
     print(f'Read Start time: {float((time.time() - start)) / 60} minutes')
     print('Reading data...')
     # db.readDB('TOP 50', '', '')
-    db.readFile()
+    # db.readFile()
+    db.readFileCSV()
     print(f'Read END time: {float((time.time() - start)) / 60} minutes')
     print(len(db.sm_df.index))
     print(len(db.pr_df.index))
@@ -183,7 +201,7 @@ if __name__=='__main__':
     print('Matching...')
     print(time.localtime())
     # client.submit(db.matchNames())
-    db.matchNames()
+    # db.matchNames()
     print(f'Fuzzy Match END time: {float((time.time() - start)) / 60} minutes')
     # print(len(db.final_df.index))
     # print('Sending to snowflake...')
