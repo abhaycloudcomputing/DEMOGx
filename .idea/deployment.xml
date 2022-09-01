@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="hadoop@ec2-100-24-22-182.compute-1.amazonaws.com:22">
         <serverdata>
@@ -149,10 +149,31 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="hadoop@ec2-44-203-213-158.compute-1.amazonaws.com:22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="hadoop@ec2-44-203-25-123.compute-1.amazonaws.com:22">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="hadoop@ec2-44-210-140-253.compute-1.amazonaws.com:22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="hadoop@ec2-44-211-68-154.compute-1.amazonaws.com:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_9" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
@@ -178,5 +199,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
